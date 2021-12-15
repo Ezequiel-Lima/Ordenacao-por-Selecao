@@ -10,15 +10,28 @@ namespace Exercicio_12
     {
         static void Main(string[] args)
         {
+            //Declaração de array e lista
+            List<int> list = new List<int> { 3, 5, 9, 8, 7, 4 };
             int[] vetor = { 7, 5, 6, 7, 8, 9, 10, 2 };
-            OrdenacaoPorSelecao(vetor);
 
-            Console.WriteLine("Ordenação Por Seleção: ");
+            //Funções para ordenar, vetor foi criada e da lista é do próprio C#
+            OrdenacaoPorSelecao(vetor);
+            list.Sort();
+
+            //Laços para percorrer toda a lista
+            Console.WriteLine("Ordeção de lista do C#: ");
+            foreach (int item in list)
+            {
+                Console.Write(item + " ");
+            }
+
+            Console.WriteLine("\nOrdenação Por Seleção em um Array: ");
             foreach (int item in vetor)
             {
-                Console.WriteLine(item);
+                Console.Write(item + " ");
             }
-            
+
+            Console.WriteLine("\nPressione qualquer tecla para finalizar!");
             Console.ReadKey();
         }
 
